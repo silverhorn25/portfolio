@@ -4,7 +4,7 @@ import { FloatingButton } from '../common/floating-button';
 export const Home: React.FC = () => {
     return (
       <>
-        <div className="md:container md:mx-auto h-screen bg-gradient-to-r from-violet-500 to-fuchsia-500">
+        <div className="md:container md:mx-auto h-screen bg-cover bg-center" style={{ backgroundImage: "url('/portfolio-bg.jpg')" }}>
           <div>
             <div className="flex justify-end">
               <p className="font-sans text-lg mb-4 mt-2 mr-5">
@@ -23,7 +23,7 @@ export const Home: React.FC = () => {
                 <p className="font-sans text-lg text-2xl font-bold mt-28">
                   Hi there! Im
                 </p>
-                <p className="font-sans text-lg text-5xl font-bold mt-10">
+                <p className="font-sans text-6xl text-5xl font-bold mt-10 ml-28 typing-animation">
                   Jetro Verdida
                 </p>
                 <p className="font-sans text-lg mt-10">
@@ -33,13 +33,13 @@ export const Home: React.FC = () => {
                 <div className="mt-10">
                   <button
                     type="button"
-                    className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
+                    className="transition ease-in-out delay-150 bg-white-500 hover:-translate-y-1 hover:scale-110 hover:bg-white-500 duration-300 text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                   >
-                    Resume
+                    Download Resume
                   </button>
                 </div>
-                <FloatingButton />
               </div>
+              <FloatingButton />
             </div>
           </div>
         </div>
