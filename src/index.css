@@ -32,3 +32,46 @@ code {
   border-right: 0.15em solid black; /* Cursor effect */
   animation: typing 3.5s steps(40, end), blink 0.75s step-end infinite;
 }
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes bottomIn {
+  0% {
+    transform: translatey(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.bottom-in {
+  animation: bottomIn 0.5s ease-out;
+}
