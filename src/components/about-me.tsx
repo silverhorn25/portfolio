@@ -35,18 +35,16 @@ export const AboutMe: React.FC = () => {
                 creating efficient, scalable, and user-friendly applications. With
                 a background in <span className='font-bold'>Bachelor of Science in Information Technology</span>, I
                 specialize in <span className='font-bold'>Web Development</span> using  <span className='font-bold'>Java Springboot</span> for back-end  and 
-                <span className='font-bold'> React Typescript</span> for front -end. I also specialized in <span>Desktop App Development</span>
-                using <span className='font-bold'> Electron</span> also related in react.
+                <span className='font-bold'> React Typescript</span> for front -end. I also specialized in <span>Desktop App Development </span>
+                using <span className='font-bold'> Electron</span>.
               </p>
               <p className="font-sans text-lg mt-4 text-justify">
                 Over the years, I've had the opportunity to work on diverse
                 projects, from building robust backend systems to crafting
-                seamless user interfaces. My portfolio showcases a selection of my
-                work, highlighting my ability to solve complex problems, my
+                seamless user interfaces. My portfolio showcases of my previous
+                work contribution, highlighting my ability to solve complex problems, my
                 commitment to clean and maintainable code, and my dedication to
-                continuous learning. Explore my projects to see how I've applied my
-                skills to real-world challenges and how I can bring value to your
-                next project. Let's build something amazing together!
+                continuous learning. Let's build something amazing together!
               </p>
             </div>
           </div>

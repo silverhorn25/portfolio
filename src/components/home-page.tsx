@@ -59,8 +59,32 @@ export const Home: React.FC = () => {
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white rounded-lg p-6 w-1/3">
-            <h2 className="text-2xl font-bold mb-4">Download Resume</h2>
-            <p className="mb-4">Are you sure you want to download the resume?</p>
+            <button
+              type="button"
+              className="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2"
+            >
+              <a
+                href="/my-resume.pdf"
+                download="resume.pdf"
+                className="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2"
+              >
+                <img className="object-cover" src="/pdf.png" alt="PDF" />
+                Download as PDF
+              </a>
+            </button>
+            <button
+              type="button"
+              className="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2 ml-10"
+            >
+              <a
+                href="/my-resume.docx"
+                download="resume.docx"
+                className="text-gray-900 bg-gray-100 hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2"
+              >
+                <img className="object-cover" src="/word.png" alt="PDF" />
+                Download as Docs
+              </a>
+            </button>
             <div className="flex justify-end">
               <button
                 onClick={closeModal}
