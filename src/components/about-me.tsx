@@ -1,55 +1,287 @@
-import React, { useEffect, useState } from 'react';
-import { FloatingButton } from '../common/floating-button';
+import React, { useState } from "react";
+import { FloatingButton } from "../common/floating-button";
+import { Item1, Item2, Item3 } from "../common/items";
 
 export const AboutMe: React.FC = () => {
-    const [fadeIn, setFadeIn] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-    useEffect(() => {
-        // Triggering the fade-in effect after a short delay to allow DOM rendering
-        setTimeout(() => {
-            setFadeIn(true);
-        }, 100);
-    }, []);
+  const slides = [Item1, Item2, Item3];
 
-    return (
-      <>
-        <div
-          className="md:container md:mx-auto h-screen bg-cover bg-center bg-gray-100"
-        >
-          <div className="flex justify-end">
-            <p className="font-sans font-bold text-lg text-gray mb-4 mt-2 mr-5">
-              About Me
-            </p>
-          </div>
-          <div className="shadow-2xl h-5/6 w-4/5 mx-auto flex flex-col md:flex-row rounded-md items-center p-6 bg-gray-200 slide-in">
-            <div className="relative w-full md:w-1/4">
-              <img
-                src="/profile.jpg"
-                alt="Profile"
-                className="w-48 h-48 object-cover rounded-md mb-4 md:mb-0 md:mr-6 drop-shadow-2xl absolute md:relative md:top-[-20px]"
-              />
-            </div>
-            <div className="flex flex-col w-full md:w-3/4">
-              <p className="font-sans text-lg mt-10 text-justify">
-                I'm <span className='font-bold'>Jetro Verdida</span>, a passionate software developer with a knack for
-                creating efficient, scalable, and user-friendly applications. With
-                a background in <span className='font-bold'>Bachelor of Science in Information Technology</span>, I
-                specialize in <span className='font-bold'>Web Development</span> using  <span className='font-bold'>Java Springboot</span> for back-end  and 
-                <span className='font-bold'> React Typescript</span> for front -end. I also specialized in <span>Desktop App Development </span>
-                using <span className='font-bold'> Electron</span>.
-              </p>
-              <p className="font-sans text-lg mt-4 text-justify">
-                Over the years, I've had the opportunity to work on diverse
-                projects, from building robust backend systems to crafting
-                seamless user interfaces. My portfolio showcases of my previous
-                work contribution, highlighting my ability to solve complex problems, my
-                commitment to clean and maintainable code, and my dedication to
-                continuous learning. Let's build something amazing together!
-              </p>
-            </div>
-          </div>
-          <FloatingButton />
-        </div>
-      </>
+  const nextSlide = () => {
+    setCurrentSlide(
+      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
     );
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prevIndex) => (prevIndex + 1) % slides.length);
+  };
+
+  return (
+    <>
+      <div className="flex h-screen">
+        <div
+          className="w-1/4 relative bg-cover bg-left"
+          style={{ backgroundImage: "url('/side-bg.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-50 p-4">
+            <h1 className="text-2xl font-bold text-white">
+              Projects Experience
+            </h1>
+          </div>
+        </div>
+        {/* content 1 */}
+        <div className="w-3/4 overflow-y-auto p-4">
+          <div className="h-96 bg-white border rounded-lg shadow-xl">
+            <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
+              <div
+                className="flex transition-transform duration-500"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {slides.map((ItemComponent, index) => (
+                  <div
+                    key={index}
+                    className="w-full flex-shrink-0 flex items-center justify-center"
+                  >
+                    <ItemComponent />
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m15 19-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m9 5 7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          {/* content 2 */}
+          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
+            <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
+              <div
+                className="flex transition-transform duration-500"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {slides.map((ItemComponent, index) => (
+                  <div
+                    key={index}
+                    className="w-full flex-shrink-0 flex items-center justify-center"
+                  >
+                    <ItemComponent />
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m15 19-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m9 5 7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          {/* content 3 */}
+          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
+            <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
+              <div
+                className="flex transition-transform duration-500"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {slides.map((ItemComponent, index) => (
+                  <div
+                    key={index}
+                    className="w-full flex-shrink-0 flex items-center justify-center"
+                  >
+                    <ItemComponent />
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m15 19-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m9 5 7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          {/* content 4 */}
+          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
+            <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
+              <div
+                className="flex transition-transform duration-500"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {slides.map((ItemComponent, index) => (
+                  <div
+                    key={index}
+                    className="w-full flex-shrink-0 flex items-center justify-center"
+                  >
+                    <ItemComponent />
+                  </div>
+                ))}
+              </div>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m15 19-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
+              >
+                <svg
+                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m9 5 7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <FloatingButton />
+    </>
+  );
 };

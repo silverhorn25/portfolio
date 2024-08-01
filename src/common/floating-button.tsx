@@ -84,7 +84,7 @@ export const FloatingButton = () => {
             viewBox="0 0 24 24"
             onClick={() => navigate("/about-me")}
           >
-            <title>About Me</title>
+            <title>Projects</title>
             <path
               stroke="currentColor"
               stroke-linejoin="round"
