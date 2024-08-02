@@ -1,20 +1,31 @@
 import React, { useState } from "react";
 import { FloatingButton } from "../common/floating-button";
-import { Item1, Item2, Item3 } from "../common/items";
+import { H1, H2, H3, T1, T2, T3 } from "../common/items";
 
 export const AboutMe: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const slides = [Item1, Item2, Item3];
+  const hSlides = [H1, H2, H3];
+  const tSlides = [T1, T2, T3];
 
   const nextSlide = () => {
-    setCurrentSlide(
-      (prevIndex) => (prevIndex - 1 + slides.length) % slides.length
-    );
+    setCurrentSlide((prevIndex) => (prevIndex + 1) % hSlides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex + 1) % slides.length);
+    setCurrentSlide(
+      (prevIndex) => (prevIndex - 1 + hSlides.length) % hSlides.length
+    );
+  };
+
+  const nextTslide = () => {
+    setCurrentSlide((prevIndex) => (prevIndex + 1) % tSlides.length);
+  };
+
+  const prevTslide = () => {
+    setCurrentSlide(
+      (prevIndex) => (prevIndex - 1 + tSlides.length) % tSlides.length
+    );
   };
 
   return (
@@ -25,20 +36,20 @@ export const AboutMe: React.FC = () => {
           style={{ backgroundImage: "url('/side-bg.jpg')" }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50 p-4">
-            <h1 className="text-2xl font-bold text-white">
+            <h1 className="text-2xl font-bold text-white ml-20">
               Projects Experience
             </h1>
           </div>
         </div>
-        {/* content 1 */}
         <div className="w-3/4 overflow-y-auto p-4">
+          {/* content 1 */}
           <div className="h-96 bg-white border rounded-lg shadow-xl">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {slides.map((ItemComponent, index) => (
+                {hSlides.map((ItemComponent, index) => (
                   <div
                     key={index}
                     className="w-full flex-shrink-0 flex items-center justify-center"
@@ -100,7 +111,7 @@ export const AboutMe: React.FC = () => {
                 className="flex transition-transform duration-500"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
-                {slides.map((ItemComponent, index) => (
+                {tSlides.map((ItemComponent, index) => (
                   <div
                     key={index}
                     className="w-full flex-shrink-0 flex items-center justify-center"
@@ -110,7 +121,7 @@ export const AboutMe: React.FC = () => {
                 ))}
               </div>
               <button
-                onClick={prevSlide}
+                onClick={prevTslide}
                 className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
               >
                 <svg
@@ -132,7 +143,7 @@ export const AboutMe: React.FC = () => {
                 </svg>
               </button>
               <button
-                onClick={nextSlide}
+                onClick={nextTslide}
                 className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
               >
                 <svg
@@ -156,7 +167,7 @@ export const AboutMe: React.FC = () => {
             </div>
           </div>
           {/* content 3 */}
-          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
+          {/* <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
@@ -216,9 +227,9 @@ export const AboutMe: React.FC = () => {
                 </svg>
               </button>
             </div>
-          </div>
+          </div> */}
           {/* content 4 */}
-          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
+          {/* <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
@@ -278,7 +289,7 @@ export const AboutMe: React.FC = () => {
                 </svg>
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <FloatingButton />

@@ -4,7 +4,15 @@ import { FloatingButton } from "../common/floating-button";
 export const Skills: React.FC = () => {
   return (
     <>
-      <div className="md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4">
+      <div
+        className="md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 bg-black bg-opacity-8"
+        style={{
+          backgroundImage: "url('/skill-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <div className="ml-10 mt-5 bottom-in">
           <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <a
@@ -24,9 +32,10 @@ export const Skills: React.FC = () => {
                 Java Springboot
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                I experince using Spring for back-end in our Project POS
-                I had 1 Year experince where I implemented CRUD, API security chain handler,
-                file structuring, log rotation and some generic functions
+                I have experience using Spring for the back-end in our Project
+                POS. I had 1 year of experience where I implemented CRUD, API
+                security chain handler, file structuring, log rotation, and some
+                generic functions.
               </p>
             </div>
           </div>
@@ -50,8 +59,9 @@ export const Skills: React.FC = () => {
                 React Typescript
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                I experienced using React Typescipt for the front-end, where I designed
-                module UI using Ant Design, implement some common component and functions
+                I have experience using React TypeScript for the front-end,
+                where I designed module UI using Ant Design, implemented some
+                common components and functions.
               </p>
             </div>
           </div>
@@ -74,10 +84,10 @@ export const Skills: React.FC = () => {
                 Electron
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                I experienced Electron where all the time I am being assigned to.
-                I experienced created Desktop Aplication for our POS App, most of these app
-                are being used in Dinning Restaurant, Unilab, Boutique and other. The language 
-                that electron I used is also react typescirpt
+                I have experience with Electron, where I created Desktop
+                Applications for our POS App. These apps are used in dining
+                restaurants, Unilab, boutiques, and other places. The language
+                used in Electron projects is also React TypeScript.
               </p>
             </div>
           </div>
