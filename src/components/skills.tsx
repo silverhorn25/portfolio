@@ -4,15 +4,7 @@ import { FloatingButton } from "../common/floating-button";
 export const Skills: React.FC = () => {
   return (
     <>
-      <div
-        className="md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 bg-black bg-opacity-8"
-        style={{
-          backgroundImage: "url('/skill-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <div className="md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 bg-black bg-opacity-8 dark:bg-dark-grey">
         <div className="ml-10 mt-5 bottom-in">
           <div className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
             <a
@@ -28,7 +20,7 @@ export const Skills: React.FC = () => {
             </a>
 
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 dark:border-gray-900">
                 Java Springboot
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -55,7 +47,7 @@ export const Skills: React.FC = () => {
             </a>
 
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 dark:border-gray-900">
                 React Typescript
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
@@ -80,7 +72,7 @@ export const Skills: React.FC = () => {
               />
             </a>
             <div className="flex flex-col justify-between p-4 leading-normal">
-              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100 dark:border-gray-900">
                 Electron
               </h5>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">

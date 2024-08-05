@@ -35,15 +35,15 @@ export const AboutMe: React.FC = () => {
           className="w-1/4 relative bg-cover bg-left"
           style={{ backgroundImage: "url('/side-bg.jpg')" }}
         >
-          <div className="absolute inset-0 bg-black bg-opacity-50 p-4">
-            <h1 className="text-2xl font-bold text-white ml-20">
+          <div className="absolute inset-0 bg-black bg-opacity-50 p-4 dark:bg-black dark:bg-opacity-80">
+            <h1 className="text-2xl font-bold text-gray-100 ml-20">
               Projects Experience
             </h1>
           </div>
         </div>
-        <div className="w-3/4 overflow-y-auto p-4">
+        <div className="w-3/4 overflow-y-auto p-4 dark:bg-dark-grey ">
           {/* content 1 */}
-          <div className="h-96 bg-white border rounded-lg shadow-xl">
+          <div className="h-96 bg-white border rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
@@ -60,10 +60,10 @@ export const AboutMe: React.FC = () => {
               </div>
               <button
                 onClick={prevSlide}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl dark:bg-transparent"
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  className="w-6 h-6 text-gray-500 dark:text-white-"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -82,10 +82,10 @@ export const AboutMe: React.FC = () => {
               </button>
               <button
                 onClick={nextSlide}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl dark:bg-transparent"
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  className="w-6 h-6 text-gray-500 dark:text-white-900"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -105,7 +105,7 @@ export const AboutMe: React.FC = () => {
             </div>
           </div>
           {/* content 2 */}
-          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
+          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
@@ -122,10 +122,10 @@ export const AboutMe: React.FC = () => {
               </div>
               <button
                 onClick={prevTslide}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl dark:bg-transparent"
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  className="w-6 h-6 text-gray-500 dark:text-white-900"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -144,10 +144,10 @@ export const AboutMe: React.FC = () => {
               </button>
               <button
                 onClick={nextTslide}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl dark:bg-transparent"
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  className="w-6 h-6 text-gray-500 dark:text-white-900"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
