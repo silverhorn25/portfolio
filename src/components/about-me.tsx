@@ -1,30 +1,43 @@
 import React, { useState } from "react";
 import { FloatingButton } from "../common/floating-button";
-import { H1, H2, H3, T1, T2, T3 } from "../common/items";
+import { H1, H2, H3, P1, P2, P3, T1, T2, T3 } from "../common/items";
 
 export const AboutMe: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [homeSlide, setHomeSlide] = useState(0);
+  const [tmSlide, setTmSlide] = useState(0);
+  const [portfolioSlide, setPortolioSlide] = useState(0);
 
   const hSlides = [H1, H2, H3];
   const tSlides = [T1, T2, T3];
+  const pSlides = [P1, P2, P3];
 
   const nextSlide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex + 1) % hSlides.length);
+    setHomeSlide((prevIndex) => (prevIndex + 1) % hSlides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide(
+    setHomeSlide(
       (prevIndex) => (prevIndex - 1 + hSlides.length) % hSlides.length
     );
   };
 
   const nextTslide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex + 1) % tSlides.length);
+    setTmSlide((prevIndex) => (prevIndex + 1) % tSlides.length);
   };
 
   const prevTslide = () => {
-    setCurrentSlide(
+    setTmSlide(
       (prevIndex) => (prevIndex - 1 + tSlides.length) % tSlides.length
+    );
+  };
+
+  const nextPslide = () => {
+    setPortolioSlide((prevIndex) => (prevIndex + 1) % pSlides.length);
+  };
+
+  const prevPslide = () => {
+    setPortolioSlide(
+      (prevIndex) => (prevIndex - 1 + pSlides.length) % pSlides.length
     );
   };
 
@@ -47,7 +60,7 @@ export const AboutMe: React.FC = () => {
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${homeSlide * 100}%)` }}
               >
                 {hSlides.map((ItemComponent, index) => (
                   <div
@@ -109,7 +122,7 @@ export const AboutMe: React.FC = () => {
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${tmSlide * 100}%)` }}
               >
                 {tSlides.map((ItemComponent, index) => (
                   <div
@@ -167,13 +180,13 @@ export const AboutMe: React.FC = () => {
             </div>
           </div>
           {/* content 3 */}
-          {/* <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
+          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                style={{ transform: `translateX(-${portfolioSlide * 100}%)` }}
               >
-                {slides.map((ItemComponent, index) => (
+                {pSlides.map((ItemComponent, index) => (
                   <div
                     key={index}
                     className="w-full flex-shrink-0 flex items-center justify-center"
@@ -183,11 +196,11 @@ export const AboutMe: React.FC = () => {
                 ))}
               </div>
               <button
-                onClick={prevSlide}
-                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl"
+                onClick={prevPslide}
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 rounded-full shadow-xl dark:bg-transparent"
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  className="w-6 h-6 text-gray-500 dark:text-white-900"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -205,11 +218,11 @@ export const AboutMe: React.FC = () => {
                 </svg>
               </button>
               <button
-                onClick={nextSlide}
-                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl"
+                onClick={nextPslide}
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-100 text-white rounded-full shadow-xl dark:bg-transparent"
               >
                 <svg
-                  className="w-6 h-6 text-gray-500 dark:text-white"
+                  className="w-6 h-6 text-gray-500 dark:text-white-900"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -227,7 +240,7 @@ export const AboutMe: React.FC = () => {
                 </svg>
               </button>
             </div>
-          </div> */}
+          </div>
           {/* content 4 */}
           {/* <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
