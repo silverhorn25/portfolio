@@ -46,7 +46,7 @@ export const AboutMe: React.FC = () => {
       <div className="flex h-screen">
         <div
           className="w-1/4 relative bg-cover bg-left"
-          style={{ backgroundImage: "url('/side-bg.jpg')" }}
+          style={{ backgroundImage: "url('/bg-side.jpg')" }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50 p-4 dark:bg-black dark:bg-opacity-80">
             <h1 className="text-2xl font-bold text-gray-100 ml-20">
@@ -56,7 +56,7 @@ export const AboutMe: React.FC = () => {
         </div>
         <div className="w-3/4 overflow-y-auto p-4 dark:bg-dark-grey ">
           {/* content 1 */}
-          <div className="h-96 bg-white border rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900">
+          <div className="h-96 bg-white border rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900 bottom-in">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
@@ -118,7 +118,7 @@ export const AboutMe: React.FC = () => {
             </div>
           </div>
           {/* content 2 */}
-          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900">
+          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900 bottom-in">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"
@@ -180,7 +180,7 @@ export const AboutMe: React.FC = () => {
             </div>
           </div>
           {/* content 3 */}
-          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900">
+          <div className="h-96 bg-white border mt-10 rounded-lg shadow-xl dark:bg-primary-grey dark:border-gray-900 bottom-in">
             <div className="relative w-full h-full mx-auto mt-10 overflow-hidden">
               <div
                 className="flex transition-transform duration-500"

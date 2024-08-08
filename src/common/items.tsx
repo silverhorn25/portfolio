@@ -77,13 +77,25 @@ export const Item4: React.FC = () => (
 
 export const H1: React.FC = () => (
   <div className="relative w-full h-80 bg-white border border-gray-200 rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    {/* Darkened Image */}
     <div className="absolute inset-0">
       <img
         src="/h1.jpg"
         alt="Profile"
-        className="w-full h-full object-cover opacity-75"
+        className="w-full h-full object-cover opacity-50" // Reduced opacity to darken the image
       />
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+      {/* Overlay to darken the image */}
     </div>
+
+    {/* Watermark */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <p className="text-white text-3xl font-bold opacity-10 transform rotate-45">
+        CONFIDENTIAL
+      </p>
+    </div>
+
+    {/* Content */}
     <div className="relative flex flex-col justify-between p-4 leading-normal">
       <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-opacity-50 bg-black text-white py-2 text-center w-full">
         Login Page
@@ -94,13 +106,25 @@ export const H1: React.FC = () => (
 
 export const H2: React.FC = () => (
   <div className="relative w-full h-80 bg-white border border-gray-200 rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    {/* Darkened Image */}
     <div className="absolute inset-0">
       <img
         src="/h2.jpg"
         alt="Profile"
-        className="w-full h-full object-cover opacity-75"
+        className="w-full h-full object-cover opacity-50" // Reduced opacity to darken the image
       />
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+      {/* Overlay to darken the image */}
     </div>
+
+    {/* Watermark */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <p className="text-white text-3xl font-bold opacity-10 transform rotate-45">
+        CONFIDENTIAL
+      </p>
+    </div>
+
+    {/* Content */}
     <div className="relative flex flex-col justify-between p-4 leading-normal">
       <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-opacity-50 bg-black text-white py-2 text-center w-full">
         Dashboard
@@ -111,13 +135,25 @@ export const H2: React.FC = () => (
 
 export const H3: React.FC = () => (
   <div className="relative w-full h-80 bg-white border border-gray-200 rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    {/* Darkened Image */}
     <div className="absolute inset-0">
       <img
         src="/h3.jpg"
         alt="Profile"
-        className="w-full h-full object-cover opacity-75"
+        className="w-full h-full object-cover opacity-50" // Reduced opacity to darken the image
       />
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+      {/* Overlay to darken the image */}
     </div>
+
+    {/* Watermark */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <p className="text-white text-3xl font-bold opacity-10 transform rotate-45">
+        CONFIDENTIAL
+      </p>
+    </div>
+
+    {/* Content */}
     <div className="relative flex flex-col justify-between p-4 leading-normal">
       <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-opacity-50 bg-black text-white py-2 text-center w-full">
         Product List
@@ -129,13 +165,25 @@ export const H3: React.FC = () => (
 // different screen
 export const T1: React.FC = () => (
   <div className="relative w-full h-80 bg-white border border-gray-200 rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    {/* Darkened Image */}
     <div className="absolute inset-0">
       <img
         src="/t1.jpg"
         alt="Profile"
-        className="w-full h-full object-cover opacity-75"
+        className="w-full h-full object-cover opacity-50" // Reduced opacity to darken the image
       />
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+      {/* Overlay to darken the image */}
     </div>
+
+    {/* Watermark */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <p className="text-white text-3xl font-bold opacity-10 transform rotate-45">
+        CONFIDENTIAL
+      </p>
+    </div>
+
+    {/* Content */}
     <div className="relative flex flex-col justify-between p-4 leading-normal">
       <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-opacity-50 bg-black text-white py-2 text-center w-full">
         Login Screen
@@ -146,13 +194,25 @@ export const T1: React.FC = () => (
 
 export const T2: React.FC = () => (
   <div className="relative w-full h-80 bg-white border border-gray-200 rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    {/* Darkened Image */}
     <div className="absolute inset-0">
       <img
         src="/t2.jpg"
         alt="Profile"
-        className="w-full h-full object-cover opacity-75"
+        className="w-full h-full object-cover opacity-50" // Reduced opacity to darken the image
       />
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+      {/* Overlay to darken the image */}
     </div>
+
+    {/* Watermark */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <p className="text-white text-3xl font-bold opacity-10 transform rotate-45">
+        CONFIDENTIAL
+      </p>
+    </div>
+
+    {/* Content */}
     <div className="relative flex flex-col justify-between p-4 leading-normal">
       <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-opacity-50 bg-black text-white py-2 text-center w-full">
         Main Screen
@@ -163,13 +223,25 @@ export const T2: React.FC = () => (
 
 export const T3: React.FC = () => (
   <div className="relative w-full h-80 bg-white border border-gray-200 rounded-lg shadow-2xl md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+    {/* Darkened Image */}
     <div className="absolute inset-0">
       <img
         src="/t3.jpg"
         alt="Profile"
-        className="w-full h-full object-cover opacity-75"
+        className="w-full h-full object-cover opacity-50" // Reduced opacity to darken the image
       />
+      <div className="absolute inset-0 bg-black opacity-50"></div>{" "}
+      {/* Overlay to darken the image */}
     </div>
+
+    {/* Watermark */}
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <p className="text-white text-3xl font-bold opacity-10 transform rotate-45">
+        CONFIDENTIAL
+      </p>
+    </div>
+
+    {/* Content */}
     <div className="relative flex flex-col justify-between p-4 leading-normal">
       <p className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-opacity-50 bg-black text-white py-2 text-center w-full">
         Option Screen

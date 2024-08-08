@@ -68,7 +68,7 @@ export const Home: React.FC = () => {
           </p>
         </div>
         <div
-          className={`shadow-2xl h-5/6 w-4/5 mx-auto flex flex-col md:flex-row rounded-md items-center p-6 bg-gray-200 dark:bg-primary-grey`}
+          className={`shadow-2xl h-5/6 w-4/5 mx-auto flex flex-col md:flex-row rounded-md items-center p-6 bg-gray-200 dark:bg-primary-grey bottom-in`}
         >
           <div className="relative w-full md:w-1/4 dark:opacity-75">
             <img
