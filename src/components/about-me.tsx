@@ -43,7 +43,7 @@ export const AboutMe: React.FC = () => {
 
   return (
     <>
-      <div className="flex h-screen">
+      <div className="w-full flex h-screen">
         <div
           className="w-1/4 relative bg-cover bg-left"
           style={{ backgroundImage: "url('/bg-side.jpg')" }}

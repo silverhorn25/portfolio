@@ -4,7 +4,7 @@ import { FloatingButton } from "../common/floating-button";
 export const Skills: React.FC = () => {
   return (
     <>
-      <div className="md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 bg-black bg-opacity-8 dark:bg-dark-grey">
+      <div className="w-full md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 bg-black bg-opacity-8 dark:bg-dark-grey">
         <h1 className="font-bold text-2xl dark:text-gray-100">
           Languages Experience
         </h1>
@@ -90,7 +90,7 @@ export const Skills: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 bg-black bg-opacity-8 dark:bg-dark-grey">
+      <div className="w-full md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 bg-black bg-opacity-8 dark:bg-dark-grey">
         <h1 className="font-bold text-2xl dark:text-gray-100 mt-10">
           Tools Experience
         </h1>

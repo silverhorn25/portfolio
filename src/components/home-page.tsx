@@ -19,15 +19,11 @@ export const Home: React.FC = () => {
 
   const items = [Item1, Item2, Item3, Item4];
 
-  // Intersection Observer Hooks for animations
-  const { ref: homeRef, inView: homeInView } = useInView({ triggerOnce: true });
-  const { ref: aboutMeRef, inView: aboutMeInView } = useInView({ triggerOnce: true });
-  const { ref: projectsRef, inView: projectsInView } = useInView({ triggerOnce: true });
 
   return (
     <>
       <div
-        className="md:container md:mx-auto h-screen bg-cover bg-center"
+        className="w-full md:container md:mx-auto h-screen bg-cover bg-center"
         style={{ backgroundImage: "url('/desktop.jpg')" }}
       >
         <div className="h-screen bg-cover bg-center bg-black bg-opacity-10 bg-opacity-50 dark:bg-opacity-70">
@@ -61,7 +57,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="md:container md:mx-auto h-screen bg-cover bg-center bg-gray-100 dark:bg-dark-grey">
+      <div className="w-full md:container md:mx-auto h-screen bg-cover bg-center bg-gray-100 dark:bg-dark-grey">
         <div className="flex justify-end">
           <p className="font-sans font-bold text-lg text-gray mb-4 mt-2 mr-5 dark:text-gray-100">
             About Me
@@ -111,7 +107,7 @@ export const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 dark:bg-dark-grey">
+      <div className="w-full md:container md:mx-auto h-screen bg-gray-100 flex flex-col items-center gap-4 p-4 dark:bg-dark-grey">
         <div className="relative w-full h-full mx-auto mt-10 ">
           <div className="overflow-hidden relative">
             <div
